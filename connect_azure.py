@@ -7,9 +7,9 @@ documents = ['My lovely Pat has one of the GREAT voices of her generation. I hav
 
 result = text_analytics_client.analyze_sentiment(documents, show_opinion_mining=True)
 docs = [doc for doc in result if not doc.is_error]
-print(docs)
+# print(docs)
 print("Let's visualize the sentiment of each of these documents")
 for idx, doc in enumerate(docs):
     print("Overall sentiment: {}".format(doc))
-    print("Overall sentiment: {}".format(doc.confidence_scores.negative))
-    print("Overall sentiment: {}".format(doc.sentiment))
+    # print("Overall sentiment: {}".format(doc.confidence_scores.negative))
+    # print("Overall sentiment: {}".format(doc.sentiment))
