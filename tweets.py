@@ -15,7 +15,7 @@ for tweet in sntwitter.TwitterSearchScraper(query).get_items():
         break
     else:
         # print(vars(tweet))
-        tweets.append([tweet.date, tweet.user.location, tweet.user.username, tweet.content])
+        tweets.append([tweet.date.date(), tweet.user.location, tweet.user.username, tweet.content])
         
 df = pd.DataFrame(tweets, columns=['Date', 'Location', 'User', 'Tweet'])
 df.to_csv("tweets.csv")
