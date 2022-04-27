@@ -10,6 +10,6 @@ docs = [doc for doc in result if not doc.is_error]
 print(docs)
 print("Let's visualize the sentiment of each of these documents")
 for idx, doc in enumerate(docs):
-    print("Overall sentiment: {}".format(doc.confidence_scores.positive))
+    print("Overall sentiment: {}".format(doc))
     print("Overall sentiment: {}".format(doc.confidence_scores.negative))
     print("Overall sentiment: {}".format(doc.sentiment))
